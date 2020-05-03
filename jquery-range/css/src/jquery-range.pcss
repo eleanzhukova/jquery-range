@@ -1,0 +1,119 @@
+.jquery-range {
+  $color-black: #000000;
+  $color-dark-gray: #424242;
+  $color-light-gray: #e1e1e3;
+
+  position: relative;
+  width: 100%;
+  user-select: none;
+  -ms-user-select: none;
+  &.theme-fa &__slider-handle {
+    background: transparent !important;
+    font-size: 20px;
+    line-height: 1;
+    text-shadow: 1px 1px 8px $color-black;
+    box-shadow: none;
+  }
+  &.theme-fa &__slider-inner,
+  &.theme-fa &__slider-outer,
+  &.theme-round &__slider-inner,
+  &.theme-round &__slider-outer {
+    border-radius: 4px;
+  }
+  &.theme-round &__slider-handle {
+    border-radius: 50%;
+  }
+  &.theme-quadrate &__slider-handle,
+  &.theme-quadrate &__slider-inner,
+  &.theme-quadrate &__slider-outer {
+    border-radius: 2px;
+  }
+  &__slider {
+    position: relative;
+    height: 8px;
+    &-inner {
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: $color-dark-gray;
+      overflow: hidden;
+      z-index: 1;
+    }
+    &-outer {
+      height: 100%;
+      background: $color-light-gray;
+      overflow: hidden;
+    }
+    &-handle {
+      cursor: pointer;
+      color: $color-dark-gray;
+      background: $color-dark-gray;
+      height: 20px;
+      width: 20px;
+      margin-left: -10px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      box-shadow: 0 4px 12px rgba($color-black, 0.4);
+      z-index: 10;
+    }
+  }
+  &__info {
+    position: absolute;
+    top: -40px;
+    transform: translateX(-50%);
+    padding: 4px 12px;
+    color: $color-dark-gray;
+    font-size: 12px;
+    font-weight: 300;
+    background: $color-light-gray;
+    border-radius: 5px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    &::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      transition: translateX(-50%);
+      bottom: -5px;
+      width: 0;
+      height: 0;
+      margin-left: -5px;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-top: 5px solid $color-light-gray;
+    }
+  }
+  &__scale {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
+    &-value {
+      font-size: 11px;
+      line-height: 24px;
+      font-weight: 300;
+      position: absolute;
+      top: 0;
+      transform: translateX(-50%);
+      padding-top: 6px;
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: calc(50% - 1px);
+        display: block;
+        height: 8px;
+        width: 1px;
+        background-color: $color-light-gray;
+        transition: all .3s ease;
+      }
+      &:first-child::before {
+        left: 50%;
+      }
+      &.is-active::before {
+        background-color: $color-dark-gray;
+      }
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "name": "jquery-range",
+  "version": "1.0.0",
+  "description": "jQuery plugin for range",
+  "main": "./js/jquery-range.min.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lexeevna/jquery-range.git"
+  },
+  "keywords": [
+    "range",
+    "plugin",
+    "form",
+    "input",
+    "rangeslider",
+    "jquery-plugin"
+    "font awesome handler"
+  ],
+  "author": "Elena Skripova",
+  "bugs": {
+    "url": "https://github.com/lexeevna/jquery-range/issues"
+  },
+  "homepage": "https://lexeevna.github.io/range",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "express": "^4.17.1",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^7.0.1",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-postcss": "^8.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-uglify": "^3.0.2",
+    "path": "^0.12.7"
+  }
+}
